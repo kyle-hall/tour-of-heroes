@@ -1,30 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
+import { HEROES } from '../mock-heroes';
 
 @Component({
   selector: 'app-heroes',
-  template: `
-    <h2>{{ hero.name }} Details</h2>
-    <div><span>id: </span>{{ hero.id }}</div>
-    <div><span>name: </span>{{ hero.name }}</div>
-    <input [(ngModel)]="hero.name" placeholder="name">
-  `,
-  styles: [
-    `
-
-    `
-  ]
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  selectedHero: Hero;
+  heroes = HEROES;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 
 }
+
+// <div><span>id: </span>{{ hero.id }}</div>
+// <div><span>name: </span>{{ hero.name }}</div>
+// <input [(ngModel)]="hero.name" placeholder="name">
