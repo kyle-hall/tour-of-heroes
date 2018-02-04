@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
+import { Hero } from '../symbols/hero';
 import { HEROES } from '../mock-heroes';
 
 @Component({
@@ -21,7 +21,3 @@ export class HeroesComponent implements OnInit {
   }
 
 }
-
-// <div><span>id: </span>{{ hero.id }}</div>
-// <div><span>name: </span>{{ hero.name }}</div>
-// <input [(ngModel)]="hero.name" placeholder="name">

@@ -1,4 +1,4 @@
-import { Hero } from './heroes/hero';
+import { Hero } from './symbols/hero';
 
 export const HEROES = [
   { id: 11, name: 'Mr. Nice' },
